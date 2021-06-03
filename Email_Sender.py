@@ -52,7 +52,7 @@ def send_mail():
             root.after(10, label9.grid)
 
 
-# Function handle logout/exist session
+# Function to handle logout/exist session
 def logout():
     try:
         server.quit()
@@ -93,7 +93,7 @@ def validate_login():
             return True
 
 
-# Validate message format
+# Validate message format and length
 def validate_message():
     email_text = str(entry3.get())
     subject_text = str(entry4.get())
