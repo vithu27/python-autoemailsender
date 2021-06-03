@@ -2,6 +2,7 @@ from tkinter import *
 import smtplib
 import re
 
+# Manage access credentials
 def login():
     if validate_login():
         global username
@@ -24,12 +25,14 @@ def login():
         root.after(10, root.grid)
 
 
+# Hide login menu once logged in
 def hide_login_label():
     f2.pack_forget()
     f3.pack_forget()
     root.after(10, root.grid)
 
 
+# Function to handle sending emails
 def send_mail():
     if validate_message():
         label9.grid_remove()
@@ -49,6 +52,7 @@ def send_mail():
             root.after(10, label9.grid)
 
 
+# Function handle logout/exist session
 def logout():
     try:
         server.quit()
@@ -65,6 +69,7 @@ def logout():
         label4['text'] = "Error in Logout"
 
 
+# Validate login credentials
 def validate_login():
     email_text = str(entry1.get())
     pass_text = str(entry2.get())
@@ -88,6 +93,7 @@ def validate_login():
             return True
 
 
+# Validate message format
 def validate_message():
     email_text = str(entry3.get())
     subject_text = str(entry4.get())
