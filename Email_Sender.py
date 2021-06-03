@@ -52,7 +52,7 @@ def send_mail():
             root.after(10, label9.grid)
 
 
-# Function to handle logout/exist session
+# Function to handle logout/exit session
 def logout():
     try:
         server.quit()
